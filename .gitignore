@@ -28,3 +28,9 @@ dist/
 npm-debug.log
 yarn-error.log
 >>>>>>> db0bd31e89bca2b9cdac0e0f0a07a4c13e0b5490
+
+# Ignore build outputs
+/target/
+*.jar
+*.war
+*.ear
