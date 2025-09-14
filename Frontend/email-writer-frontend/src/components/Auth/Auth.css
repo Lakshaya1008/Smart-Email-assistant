@@ -1,0 +1,177 @@
+/* Authentication Components Styles */
+
+.auth-form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.auth-form {
+  background: var(--bg-primary);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.form-input {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  transition: all var(--transition-fast);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 48px;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.form-input:disabled {
+  background: var(--bg-muted);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.form-input.error {
+  border-color: var(--error-color);
+}
+
+.form-input.error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.form-error {
+  color: var(--error-color);
+  font-size: var(--font-size-xs);
+  margin-top: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.form-error::before {
+  content: "⚠";
+  font-size: var(--font-size-sm);
+}
+
+/* Button Styles in Auth Forms */
+.auth-form .btn {
+  margin-top: var(--spacing-md);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}
+
+.auth-form .btn-large {
+  padding: var(--spacing-md) var(--spacing-lg);
+  min-height: 52px;
+}
+
+/* Loading State */
+.auth-form .btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Form Validation States */
+.form-input:valid {
+  border-color: var(--success-color);
+}
+
+.form-input:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: var(--error-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-form-container {
+    max-width: 100%;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .auth-form {
+    padding: var(--spacing-lg);
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .form-input {
+    font-size: var(--font-size-sm);
+    min-height: 44px;
+    padding: var(--spacing-sm);
+  }
+  
+  .auth-form .btn-large {
+    min-height: 48px;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-form {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+  }
+  
+  .form-input {
+    min-height: 42px;
+  }
+  
+  .auth-form .btn-large {
+    min-height: 44px;
+  }
+}
+
+/* Focus and Accessibility */
+.form-input:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Placeholder Styles */
+.form-input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+/* Required Field Indicator */
+.form-label::after {
+  content: " *";
+  color: var(--error-color);
+}
+
+.form-label:not([for$="firstName"]):not([for$="lastName"])::after {
+  display: inline;
+}
+
+.form-label[for$="firstName"]::after,
+.form-label[for$="lastName"]::after {
+  display: none;
+}

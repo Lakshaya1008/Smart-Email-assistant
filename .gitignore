@@ -1,1 +1,30 @@
+<<<<<<< HEAD
 
+=======
+﻿# Node
+node_modules/
+
+# Local envs
+*.env
+*.env.local
+*.env.*.local
+
+# IDE and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Java / Maven
+target/
+*.log
+*.jar
+
+# Build artifacts
+build/
+dist/
+
+# other
+npm-debug.log
+yarn-error.log
+>>>>>>> db0bd31e89bca2b9cdac0e0f0a07a4c13e0b5490
