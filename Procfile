@@ -1,1 +1,1 @@
-web: java -jar target/*.jar
+web: java -Xmx256m -Xss512k -jar target/*.jar
