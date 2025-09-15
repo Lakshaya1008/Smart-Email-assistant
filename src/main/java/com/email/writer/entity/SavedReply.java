@@ -20,7 +20,8 @@ import java.time.LocalDateTime;
 public class SavedReply {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "saved_reply_seq")
+    @SequenceGenerator(name = "saved_reply_seq", sequenceName = "saved_reply_seq", allocationSize = 1)
     private Long id;
 
     // Owner user relationship
